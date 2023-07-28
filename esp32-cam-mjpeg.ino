@@ -18,10 +18,10 @@
 
 // Select camera model
 //#define CAMERA_MODEL_WROVER_KIT
-#define CAMERA_MODEL_ESP_EYE
+//#define CAMERA_MODEL_ESP_EYE
 //#define CAMERA_MODEL_M5STACK_PSRAM
 //#define CAMERA_MODEL_M5STACK_WIDE
-//#define CAMERA_MODEL_AI_THINKER
+#define CAMERA_MODEL_AI_THINKER
 
 #include "camera_pins.h"
 
@@ -37,7 +37,11 @@ This is what you need to do:
 
 Should work then
 */
-#include "home_wifi_multi.h"
+// ===========================
+// Enter your WiFi credentials
+// ===========================
+#define SSID1 "ittestssid"
+#define PWD1 "qsc-vhi|1609"
 
 OV2640 cam;
 
@@ -133,7 +137,7 @@ void setup()
 
   // Frame parameters
   //  config.frame_size = FRAMESIZE_UXGA;
-  config.frame_size = FRAMESIZE_QVGA;
+  config.frame_size = FRAMESIZE_HD;
   config.jpeg_quality = 12;
   config.fb_count = 2;
 
